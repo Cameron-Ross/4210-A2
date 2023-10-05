@@ -91,4 +91,4 @@ for record in db_test:
     prob = confidence[0] if confidence[0] > confidence[1] else confidence[1]
     prob = round(prob, 2)
     # Print result
-    print_row(record[0], record[1], record[2], record[3], record[4], prediction, prob)
+    if prob >= 0.75: print_row(record[0], record[1], record[2], record[3], record[4], prediction, prob)
